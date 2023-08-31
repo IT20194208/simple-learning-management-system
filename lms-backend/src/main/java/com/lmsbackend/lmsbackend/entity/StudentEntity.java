@@ -16,9 +16,9 @@ import java.util.ArrayList;
 @Setter
 @Getter
 @ToString
-@TypeDefs({
-        @TypeDef(name = "json",typeClass = JsonType.class)
-})
+//@TypeDefs({
+//        @TypeDef(name = "json",typeClass = JsonType.class)
+//})
 public class StudentEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -31,9 +31,11 @@ public class StudentEntity {
     @Column(name = "address",length = 200,nullable = false)
     private String address;
 
-    @Type(type = "json")
-    @Column(name = "tel",length = 15,nullable = false,columnDefinition = "json")
-    private ArrayList tel;
+//    @Type(type = "json")
+//    @Column(name = "tel",length = 15,nullable = false,columnDefinition = "json")
+//    private ArrayList tel;
+    @Column(name="tel",length = 15,nullable = false)
+    private String tel;
 
     @Column(name = "nic",length = 15,nullable = false)
     private String nic;

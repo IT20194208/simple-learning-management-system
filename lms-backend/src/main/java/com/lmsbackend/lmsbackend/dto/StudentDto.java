@@ -15,7 +15,7 @@ public class StudentDto {
     private int sid;
     private String name;
     private String address;
-    private ArrayList tel;
+    private String tel;
     private String nic;
 
 }
