@@ -46,6 +46,12 @@ public class StudentController {
     public StudentDto updateStudentById(@RequestParam(value = "id")int Sid,@RequestBody StudentDto studentDto){
         return studentService.updateStudent(Sid,studentDto);
     }
-    @DeleteMapping()
+    @DeleteMapping(
+            path = "delete-student/{id}"
+    )
+    public String deleteStudent(@PathVariable(value = "id") int Sid){
+        String message=studentService.deleteStudentByid(Sid);
+        return message;
+    }
 
 }

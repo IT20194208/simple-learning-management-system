@@ -82,7 +82,7 @@ public class StudentServiceImpl implements StudentService {
     @Override
     public StudentDto updateStudent(int sid, StudentDto studentDto) {
         StudentEntity updateStudent=studentRepository.findById(sid)
-                .orElseThrow(() ->new ResourseNotFoundException("Student not exist with id: " +sid));
+                .orElseThrow(() ->new ResourseNotFoundException("Student not exist with id: " + sid));
 
         updateStudent.setName(studentDto.getName());
         updateStudent.setTel(studentDto.getTel());
@@ -90,5 +90,15 @@ public class StudentServiceImpl implements StudentService {
 
         studentRepository.save(updateStudent);
         return studentDto;
+    }
+
+    @Override
+    public String deleteStudentByid(int sid) {
+        if(studentRepository.existsById(sid)){
+            studentRepository.deleteById(sid);
+            return "student deleted successfully!!!";
+        }else{
+            throw new RuntimeException("no that kind of id");
+        }
     }
 }

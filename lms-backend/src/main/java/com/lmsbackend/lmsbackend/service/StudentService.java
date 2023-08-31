@@ -14,4 +14,6 @@ public interface StudentService {
     StudentDto getStudentById(int Sid);
 
     StudentDto updateStudent(int sid, StudentDto studentDto);
+
+    String deleteStudentByid(int sid);
 }
