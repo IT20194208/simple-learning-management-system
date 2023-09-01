@@ -7,14 +7,33 @@ const ListEmployeeComponents = () => {
   const [student,setStudents] = useState([])
   
   useEffect(() =>{
-        StudentServices.getAllStudents().then((response) => {
-            setStudents(response.data)
-            console.log(response.data)
-        }).catch(error => {
-            console.log(error);
-        })
+        // StudentServices.getAllStudents().then((response) => {
+        //     setStudents(response.data)
+        //     console.log(response.data)
+        // }).catch(error => {
+        //     console.log(error);
+        // })
+        getAllstudents();
   },[])
 
+//---------
+const getAllstudents = () => {
+    StudentServices.getAllStudents().then((response) => {
+      setStudents(response.data)
+      console.log(response.data)
+  }).catch(error => {
+      console.log(error);
+  })
+}
+//-------------------
+  const deleteStudent = (studentId) => {
+    // console.log(studentId);
+    StudentServices.deleteStudent(studentId).then((response) =>{
+          getAllstudents();
+    }).catch(error => {
+            console.log(error);
+    })
+  }
   return (
     <div className='container'>
 
@@ -45,7 +64,7 @@ const ListEmployeeComponents = () => {
                           <Link className="btn btn-info" to={`/edit-student/${student.sid}`}>update</Link>
                         </td>
                         <td>
-                          <Link className="btn btn-danger" to={`/delete-student/${student.sid}`}>delete</Link>
+                          <button className='btn btn-danger' onClick={() => deleteStudent(student.sid)}>delete</button>
                         </td>
                     </tr>
                   )  
