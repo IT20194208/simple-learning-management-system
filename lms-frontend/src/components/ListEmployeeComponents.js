@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import StudentServices from '../services/StudentServices'
 import { Link } from 'react-router-dom'
-
+import '../css/ListStudent.css';
 const ListEmployeeComponents = () => {
 
   const [student,setStudents] = useState([])
@@ -35,12 +35,12 @@ const getAllstudents = () => {
     })
   }
   return (
-    <div className='container'>
+    <div className='containering'>
 
         <br/>
         <Link to ="/add-student" className="btn btn-primary mb-2">Add Student</Link>
         <h2 className='text-center'>List of Students</h2> <br/>
-        <table className='table table-success table-striped' style={{marginTop:"10px"}}>
+        <table className='table table-success table-striped' style={{marginTop:"10px",color:"#fff"}}>
             <thead>
                 <th>Student Id</th>
                 <th>Student Name</th>
