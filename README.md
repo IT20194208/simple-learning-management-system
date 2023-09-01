@@ -3,9 +3,9 @@ Welcome to our Simple Learning Management System (LMS) web application! This pro
 
 # Key Features:
 
-### Student Management: Add, update, and delete student profiles.
-### Course Management: Create, edit, and remove courses.
-### Interactive Dashboard: A responsive dashboard for a streamlined experience.
-### User-Friendly Interface: Intuitive design for easy navigation.
-### Efficient Learning: Organize courses and assignments efficiently.
+#### Student Management: Add, update, and delete student profiles.
+#### Course Management: Create, edit, and remove courses.
+#### Interactive Dashboard: A responsive dashboard for a streamlined experience.
+#### User-Friendly Interface: Intuitive design for easy navigation.
+#### Efficient Learning: Organize courses and assignments efficiently.
 
