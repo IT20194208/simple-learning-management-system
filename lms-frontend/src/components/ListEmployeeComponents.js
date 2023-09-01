@@ -28,6 +28,8 @@ const ListEmployeeComponents = () => {
                 <th>Student Address</th>
                 <th>Student Tel</th>
                 <th>Student Nic</th>
+                <th>Edit/Update</th>
+                <th>Delete</th>
             </thead>
             <tbody>
                 {
@@ -39,6 +41,12 @@ const ListEmployeeComponents = () => {
                         <td>{student.address}</td>
                         <td>{student.tel}</td>
                         <td>{student.nic}</td>
+                        <td>
+                          <Link className="btn btn-info" to={`/edit-student/${student.sid}`}>update</Link>
+                        </td>
+                        <td>
+                          <Link className="btn btn-danger" to={`/delete-student/${student.sid}`}>delete</Link>
+                        </td>
                     </tr>
                   )  
                 }
