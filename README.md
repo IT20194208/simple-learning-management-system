@@ -8,4 +8,13 @@ Welcome to our Simple Learning Management System (LMS) web application! This pro
 #### Interactive Dashboard: A responsive dashboard for a streamlined experience.
 #### User-Friendly Interface: Intuitive design for easy navigation.
 #### Efficient Learning: Organize courses and assignments efficiently.
-
+### student manage
+![table](https://github.com/IT20194208/simple-learning-management-system/blob/main/img/lms1.JPG?raw=true)
+### student adding
+![insert](https://github.com/IT20194208/simple-learning-management-system/blob/main/img/lms2.JPG?raw=true)
+### backend entity class
+![entity](https://github.com/IT20194208/simple-learning-management-system/blob/main/img/entity.JPG?raw=true)
+### backend controller class
+![controller](https://github.com/IT20194208/simple-learning-management-system/blob/main/img/controller.JPG?raw=true)
+### backend service implementation class
+![service impl](https://github.com/IT20194208/simple-learning-management-system/blob/main/img/serviceimpl.JPG?raw=true)
