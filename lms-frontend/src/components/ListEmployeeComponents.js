@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import StudentServices from '../services/StudentServices'
 import { Link } from 'react-router-dom'
 import '../css/ListStudent.css';
+import swal from 'sweetalert';
 const ListEmployeeComponents = () => {
 
   const [student,setStudents] = useState([])
@@ -13,6 +14,7 @@ const ListEmployeeComponents = () => {
         // }).catch(error => {
         //     console.log(error);
         // })
+       // swal("deleted!", "deleted successfully!", "success");
         getAllstudents();
   },[])
 
@@ -29,7 +31,10 @@ const getAllstudents = () => {
   const deleteStudent = (studentId) => {
     // console.log(studentId);
     StudentServices.deleteStudent(studentId).then((response) =>{
-          getAllstudents();
+       
+      swal("deleted!", "deleted successfully!", "success");
+      getAllstudents();
+         
     }).catch(error => {
             console.log(error);
     })

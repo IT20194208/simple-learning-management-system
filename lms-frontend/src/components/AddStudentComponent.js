@@ -3,6 +3,7 @@ import '../css/Addstudent.css';
 import StudentServices from '../services/StudentServices';
 import { useHistory,useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom'
+import swal from 'sweetalert';
 const AddStudentComponent = () => {
 
   const [name,setName]=useState('')
@@ -19,6 +20,7 @@ const AddStudentComponent = () => {
     if(id){
 
       StudentServices.updateStudent(id,student).then((response) =>{
+        swal("Student Updated!", "updated successfully!", "success");
         history.push('/students')
       }).catch(error =>{
         console.log(error);
@@ -28,7 +30,7 @@ const AddStudentComponent = () => {
       StudentServices.createStudent(student).then((response) =>{
 
         console.log(response.data)
-        alert("student adding successfully!!!");
+        swal("Good job!", "student adding successfully!", "success");
         history.push('/students');
 
     }).catch(error => {
