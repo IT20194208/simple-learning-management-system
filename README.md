@@ -14,6 +14,7 @@ Welcome to our Simple Learning Management System (LMS) web application! This pro
 ![table](https://github.com/IT20194208/simple-learning-management-system/blob/main/img/lms1.JPG?raw=true)
 ### student adding
 ![insert](https://github.com/IT20194208/simple-learning-management-system/blob/main/img/lms2.JPG?raw=true)
+![add](https://github.com/IT20194208/simple-learning-management-system/blob/main/img/add.JPG)
 ### backend entity class
 ![entity](https://github.com/IT20194208/simple-learning-management-system/blob/main/img/entity.JPG?raw=true)
 ### backend controller class
