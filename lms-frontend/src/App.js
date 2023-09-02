@@ -5,6 +5,7 @@ import HeaderComponent from './components/HeaderComponent';
 import Home from './components/Home';
 import ListEmployeeComponents from './components/ListEmployeeComponents';
 import { BrowserRouter as Router,Route,Switch} from 'react-router-dom';  
+
 function App() {
   return (
     <div className="App">
@@ -18,7 +19,7 @@ function App() {
             <Route path="/edit-student/:id" component={AddStudentComponent}></Route>
           </Switch>
         </div>
-      <FooterComponents />
+      {/* <FooterComponents /> */}
       </Router>
     </div>
   );
